@@ -21,38 +21,45 @@ jobs:
       contents: read
       pages: read
     steps:
-      - name: Check out website branch
+      - name: Check out repository
         uses: actions/checkout@v6
         with:
           persist-credentials: false
 
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.22.0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
       - name: Check Pages configuration
+        id: pages
         uses: actions/configure-pages@v5
 
-      - name: Install Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          version: '1.9.38'
+      - name: Install website dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Verify book and lab files
         run: |
-          python3 维护工具/tools/check_release.py .
-          python3 维护工具/tools/check_reading_views.py
-          python3 维护工具/tools/check_supplements.py
+          python3 tools/tools/check_release.py .
+          python3 tools/tools/check_reading_views.py
+          python3 tools/tools/check_supplements.py
 
-      - name: Generate reading pages
-        run: python3 website/scripts/build.py
-
-      - name: Render website
-        run: quarto render website/build
-
-      - name: Verify website links and assets
-        run: python3 website/scripts/check.py
+      - name: Build static website
+        run: pnpm run docs:build
+        env:
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
       - name: Upload verified website
         uses: actions/upload-pages-artifact@v3
         with:
-          path: website/build/_site
+          path: website/build
 
   deploy:
     if: github.ref == 'refs/heads/main'

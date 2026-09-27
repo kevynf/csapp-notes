@@ -1,129 +1,63 @@
 # CSAPP 中文 Markdown 学习资料
 
-**[在线阅读](https://sunnymaria.github.io/csapp-zh-markdown/)**
+《深入理解计算机系统》（CS:APP，第 3 版）中文学习资料，包含按章节整理的正文、练习题答案、附录、参考文献和八个配套实验说明。正文与实验资料以 Markdown 保存，网站由 Astro Starlight 生成静态页面。
 
-## 为什么建立这个仓库
+## 快速入口
 
-虽然 AI 正在迅速发展，获取知识、解释概念和解决问题变得越来越方便，但我仍然相信，想要深入学习计算机、在心中建立完整的底层知识框架，系统地读完一部扎实的书籍仍然是一条不可替代的学习路径。对我而言，CSAPP 就是这样一本值得从头读下去、反复思考和实践的书。
-
-在自己的学习过程中，我希望找到覆盖 CSAPP 全部章节、方便在线阅读的中文 Markdown 资料，却没有找到符合这一需求的完整整理。因此，我建立了这个仓库，希望把正文、图表、习题和配套实验整理到一起，让阅读和学习能够更方便地衔接。
-
-我本人也是这本书的读者之一。希望这份整理能帮助同样喜爱 CSAPP 的读者减少学习中的阻碍，不必受实体书的携带和阅读场景限制，可以在电脑或其他设备上阅读、查找内容和记录笔记，把更多精力留给理解、做题和实验。
-
-## 开始阅读
-
-面向正在学习《深入理解计算机系统》（CSAPP，第三版）的读者，提供按章节拆分的中文正文、习题与原书答案，以及八个实验的中文说明和官方自学实验包，方便阅读、做题和记录自己的笔记。
-
-**[开始阅读](第01章-计算机系统漫游/README.md) · [前言](前言/README.md) · [八个实验](实验/README.md)**
-
-当前版本：**v1.2**。新增在线阅读网站，支持章节导航、全文搜索、前后页跳转和深色模式，同时保留完整的 Markdown 资料，方便下载阅读和记录笔记。
-
-## 两种阅读方式
-
-本仓库同时保留两种正文入口，读者可以按自己的习惯选择：
-
-- **整章连续阅读：** 进入章节目录后打开 `chapter.md`，一页读完本章，适合从头到尾学习。
-- **按小节阅读：** 进入章节目录后打开 `README.md`，从小节目录选择具体内容，适合查找、引用和单独阅读。
-
-其中，章节目录里的 `README.md` 只是导航页，`chapter.md` 才是整章正文；每个小节的 Markdown 文件和图片也都继续保留。
+- [开始阅读](chapter-01-computer-systems/README.md)
+- [前言](preface/README.md)
+- [实验资料](labs/README.md)
+- [网站构建与部署说明](website/README.md)
 
 ## 阅读目录
 
-以下链接进入各章导航页，可选择整章连续阅读或按小节阅读，练习题答案单独提供。
-
-| 章节 | 正文 |
+| 内容 | 入口 |
 | --- | --- |
-| 前言 | [出版说明、序言与阅读建议](前言/README.md) |
-| 第 1 章 | [计算机系统漫游](第01章-计算机系统漫游/README.md) |
-| 第一部分 | 程序结构和执行 |
-| 第 2 章 | [信息的表示和处理](第02章-信息的表示和处理/README.md) |
-| 第 3 章 | [程序的机器级表示](第03章-程序的机器级表示/README.md) |
-| 第 4 章 | [处理器体系结构](第04章-处理器体系结构/README.md) |
-| 第 5 章 | [优化程序性能](第05章-优化程序性能/README.md) |
-| 第 6 章 | [存储器层次结构](第06章-存储器层次结构/README.md) |
-| 第二部分 | 在系统上运行程序 |
-| 第 7 章 | [链接](第07章-链接/README.md) |
-| 第 8 章 | [异常控制流](第08章-异常控制流/README.md) |
-| 第 9 章 | [虚拟内存](第09章-虚拟内存/README.md) |
-| 第三部分 | 程序间的交互和通信 |
-| 第 10 章 | [系统级 I/O](第10章-系统级IO/README.md) |
-| 第 11 章 | [网络编程](第11章-网络编程/README.md) |
-| 第 12 章 | [并发编程](第12章-并发编程/README.md) |
-| 附录 A | [错误处理](附录A-错误处理/README.md) |
-| 参考文献 | [全书参考文献](参考文献.md) |
+| 前言 | [出版说明、序言与阅读建议](preface/README.md) |
+| 第 1 章 | [计算机系统漫游](chapter-01-computer-systems/README.md) |
+| 第 2 章 | [信息的表示和处理](chapter-02-representing-and-manipulating-information/README.md) |
+| 第 3 章 | [程序的机器级表示](chapter-03-machine-level-representation/README.md) |
+| 第 4 章 | [处理器体系结构](chapter-04-processor-architecture/README.md) |
+| 第 5 章 | [优化程序性能](chapter-05-optimizing-program-performance/README.md) |
+| 第 6 章 | [存储器层次结构](chapter-06-memory-hierarchy/README.md) |
+| 第 7 章 | [链接](chapter-07-linking/README.md) |
+| 第 8 章 | [异常控制流](chapter-08-exceptional-control-flow/README.md) |
+| 第 9 章 | [虚拟内存](chapter-09-virtual-memory/README.md) |
+| 第 10 章 | [系统级 I/O](chapter-10-system-level-io/README.md) |
+| 第 11 章 | [网络编程](chapter-11-network-programming/README.md) |
+| 第 12 章 | [并发编程](chapter-12-concurrent-programming/README.md) |
+| 附录 A | [错误处理](appendix-a-error-handling/README.md) |
+| 参考文献 | [全书参考文献](bibliography.md) |
 
-三部分的导语分别保留在第 2、7、10 章开头。
+每章目录中的 `README.md` 用于按小节阅读，`chapter.md` 用于整章连续阅读；练习题答案和家庭作业入口位于对应章节目录。
 
-## 这里有什么
+## 网站预览
 
-| 资料 | 内容与位置 |
-| --- | --- |
-| 章节正文 | [前言](前言/README.md)及第 1—12 章；每章同时提供整章正文和按小节阅读入口 |
-| 书末资料 | [附录 A：错误处理](附录A-错误处理/README.md)与[全书参考文献](参考文献.md) |
-| 练习题与家庭作业 | 练习题放在对应正文小节中；有家庭作业的章节可从章目录进入，填空表格保留空位 |
-| 原书练习题答案 | 共 238 道，各章页首与页尾有独立的“练习题答案”入口，便于做完后核对 |
-| 实验中文说明 | [八个实验](实验/README.md)的 Markdown 译文，另附 Y86-64 处理器模拟器指南 |
-| 实验程序包 | 每个实验目录均附官方自学 `.tar` 包，文档顶部可直接找到 |
-
-答案部分是原书提供的**练习题答案**，不包含自行编写的家庭作业解答或实验解答。已核实的原书排印疑点见[答案编校说明](答案编校说明.md)。
-
-## 正文怎么找
-
-从本页的阅读目录进入章节：想连续学习就打开章节目录中的 `chapter.md`，想查找具体内容就打开章节目录中的 `README.md`，再选择对应小节。初次学习可以从第 1 章开始，前言中也有“如何阅读此书”等介绍。
-
-例如，学习补码时，在第 2 章的章首目录点击 2.2.3；随正文完成练习后，再通过页首或页尾的答案入口核对。需要记录思路时，可以在本地 Markdown 文件中添加笔记，或单独建立自己的笔记文件。
-
-## 实验怎么用
-
-| 实验 | 主要练习内容 | 对应章节 | 中文说明 |
-| --- | --- | --- | --- |
-| Data Lab | 位运算、整数与浮点数表示 | [第 2 章](第02章-信息的表示和处理/README.md) | [打开](实验/datalab-zh/datalab-zh.md) |
-| Bomb Lab | 汇编阅读、反汇编与调试 | [第 3 章](第03章-程序的机器级表示/README.md) | [打开](实验/bomblab-zh/bomblab-zh.md) |
-| Attack Lab | 栈、缓冲区溢出与返回导向编程 | [第 3 章](第03章-程序的机器级表示/README.md) | [打开](实验/attacklab-zh/attacklab-zh.md) |
-| Architecture Lab | Y86-64、流水线与性能优化 | [第 4 章](第04章-处理器体系结构/README.md)；优化部分可结合[第 5 章](第05章-优化程序性能/README.md) | [打开](实验/archlab-zh/archlab-zh.md) |
-| Cache Lab | 高速缓存模拟与矩阵转置优化 | [第 6 章](第06章-存储器层次结构/README.md)；可结合[第 5 章](第05章-优化程序性能/README.md) | [打开](实验/cachelab-zh/cachelab-zh.md) |
-| Shell Lab | 进程、信号与作业控制 | [第 8 章](第08章-异常控制流/README.md) | [打开](实验/shlab-zh/shlab-zh.md) |
-| Malloc Lab | 动态内存分配与内存管理 | [第 9 章](第09章-虚拟内存/README.md) | [打开](实验/malloclab-zh/malloclab-zh.md) |
-| Proxy Lab | 网络编程、并发与缓存 | [第 10 章](第10章-系统级IO/README.md)、[第 11 章](第11章-网络编程/README.md)、[第 12 章](第12章-并发编程/README.md) | [打开](实验/proxylab-zh/proxylab-zh.md) |
-
-1. 打开对应中文说明，了解实验目标和要求。
-2. 通过文档顶部的“实验包”链接取得同目录下的 `.tar` 文件，解压到自己的实验工作目录。
-3. 阅读[自学包与原说明的差异](实验/COMPATIBILITY.md)，然后按实验说明和包内 README 配置环境、编译及测试。
-
-实验包主要面向 Linux 环境，部分使用较早的工具链或解释器。原文中的课程日期、服务器地址和提交路径保留自官方模板，不是本仓库提供的课程服务。特别是 **Malloc 自学包仅附两份短测试，不含完整评分跟踪文件**；具体差异已在上述说明中列出。
-
-Architecture Lab 的配套资料见 [Y86-64 模拟器指南](实验/archlab-zh/simguide-zh.md)。实验包的官方来源和 SHA-256 见[来源与校验值](实验/PACKAGES.md)。
-
-## 在线阅读与本地使用
-
-**在线阅读：** 打开 [CSAPP 中文阅读网站](https://sunnymaria.github.io/csapp-zh-markdown/)，即可阅读正文、查阅答案和使用实验资料，无需下载或安装软件。网站提供章节导航、全文搜索、前后页跳转和深色模式，支持电脑与手机访问。
-
-**GitHub 阅读：** 也可以直接通过本页目录，在仓库中查看 Markdown。各章 `README.md` 是导航页，`chapter.md` 是整章正文。
-
-**下载阅读：** 使用仓库页面的 **Code → Download ZIP** 下载并完整解压，或运行：
+需要 Node.js 20 或更高版本和 pnpm：
 
 ```sh
-git clone https://github.com/SunnyMaria/csapp-zh-markdown.git
+pnpm install
+pnpm run dev
 ```
 
-随后用支持 Markdown 预览的编辑器或阅读器打开根目录 `README.md`。
+构建静态文件：
 
-在线网站与仓库使用同一份正文。请在下载、复制或移动资料时保留目录结构和图片文件，确保图片与跨章链接正常显示。
+```sh
+pnpm run docs:build
+```
 
-## 整理方式与反馈
+详细的 Astro、GitHub Pages 和内容同步说明见[网站文档](website/README.md)。
 
-正文尽量忠于原书的措辞和顺序。文字、代码、普通表格及简单公式使用可编辑文本；需要保留空间结构的图示使用本地图片。不同 Markdown 阅读器对上下标和脚注的显示支持可能不同。
+## 实验资料
 
-如果发现错字、缺段、图片截断或链接失效，欢迎提交 Issue，注明章节、题号或图号，便于核对。维护者使用的校验方法见[维护工具](维护工具/README.md)。
+[实验资料](labs/README.md)包含 Data Lab、Bomb Lab、Attack Lab、Architecture Lab、Cache Lab、Shell Lab、Malloc Lab 和 Proxy Lab 的中文说明，以及官方自学实验包。实验包来源、校验值和自学包差异见该目录中的 [PACKAGES.md](labs/PACKAGES.md) 与 [COMPATIBILITY.md](labs/COMPATIBILITY.md)。
 
-## 后续计划
+实验说明保留官方模板中的课程信息和占位内容；实验包面向自学使用，不包含实验解答。运行实验前请按说明和自学包 README 配置环境。
 
-在线阅读网站已随 v1.2 上线。后续将继续完善内容校核、搜索和电脑与手机上的阅读体验。
+## 仓库信息
 
-Markdown 资料会持续保留，与网站共用同一份正文，方便离线阅读和自行记录笔记。
+- 当前仓库：[kevynf/csapp-notes](https://github.com/kevynf/csapp-notes/)
+- 书籍官网：[CS:APP 3e](https://csapp.cs.cmu.edu/3e/)
+- 官方实验页面：[CS:APP Labs](https://csapp.cs.cmu.edu/3e/labs.html)
 
-## 特别致谢
-
-特别致敬并感谢 **[Hansimov/csapp](https://github.com/Hansimov/csapp)**。
-
-本项目整理正文所使用的 **OCR 源文件来自该仓库**。它为后续的文字核对、章节拆分以及 Markdown 整理提供了重要基础。感谢原仓库维护者和贡献者对 CSAPP 学习资料的整理与分享，也欢迎大家访问原仓库。
+本仓库只维护中文 Markdown 源文件和网站构建配置；`website/src/content/docs/`、`website/public/content/` 和 `website/build/` 均为构建生成目录。资料用于学习和阅读，请保留原始资料的版权与来源信息。

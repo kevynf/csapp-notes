@@ -1,0 +1,22 @@
+{
+  "name": "csapp-notes",
+  "private": true,
+  "version": "1.2.0",
+  "description": "CSAPP Chinese study notes and static reading site",
+  "packageManager": "pnpm@11.22.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "pnpm run docs:dev",
+    "docs:prepare": "node website/scripts/sync-content.mjs",
+    "docs:dev": "pnpm docs:prepare && astro dev --root website",
+    "docs:build": "pnpm docs:prepare && astro build --root website",
+    "docs:preview": "astro preview --root website",
+    "check:content": "python tools/tools/check_release.py . && python tools/tools/check_reading_views.py && python tools/tools/check_supplements.py"
+  },
+  "devDependencies": {
+    "@astrojs/starlight": "^0.42.4",
+    "astro": "^7.2.10"
+  }
+}

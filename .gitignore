@@ -5,11 +5,13 @@
 /work/notes/
 /notes/
 /docs/notes/
-/维护工具/notes/
-/维护工具/output/
-/维护工具/tmp/
-/维护工具/sources/
+/tools/notes/
+/tools/output/
+/tools/tmp/
+/tools/sources/
 __pycache__/
 *.py[cod]
 .DS_Store
 Thumbs.db
+/node_modules/
+/.vitepress/cache/
